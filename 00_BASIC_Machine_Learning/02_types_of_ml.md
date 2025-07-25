@@ -2,7 +2,7 @@
 
 Machine Learning (ML) can be divided into **three main types**, based on how the system learns from data:  
 
-### **1. Supervised Learning **  
+### **1. Supervised Learning**  
 - Learns from **labeled data** (input-output pairs).  
 - Goal: **Predict outcomes** for new, unseen data.  
 - **Examples:**  
@@ -10,7 +10,7 @@ Machine Learning (ML) can be divided into **three main types**, based on how the
   - **Spam Detection** (input: email → output: spam or not spam)  
 - **Algorithms:** Linear Regression, Decision Trees, Neural Networks.  
 
-### **2. Unsupervised Learning **  
+### **2. Unsupervised Learning**  
 - Learns from **unlabeled data** (no correct answers given).  
 - Goal: **Find hidden patterns** or group similar data.  
 - **Examples:**  
@@ -18,7 +18,7 @@ Machine Learning (ML) can be divided into **three main types**, based on how the
   - **Image Clustering** (grouping similar photos automatically)  
 - **Algorithms:** K-Means, PCA, Apriori.  
 
-### **3. Reinforcement Learning **  
+### **3. Reinforcement Learning**  
 - Learns by **trial & error** (like training a pet).  
 - Gets **rewards** for good actions & **penalties** for bad ones.  
 - **Examples:**  
