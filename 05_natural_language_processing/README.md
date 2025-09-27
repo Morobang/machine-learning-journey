@@ -25,24 +25,63 @@ NLP combines computational linguistics with machine learning and deep learning t
 
 ## 📊 Projects in This Section
 
-### 1. **Sentiment Analysis - Restaurant Reviews**
+### 1. **Introduction to NLP - Restaurant Reviews**
 - **File**: `01_natural_language_processing.ipynb`
-- **Concept**: Classifying text sentiment as positive or negative
+- **Concept**: Basic sentiment analysis with restaurant reviews
 - **Dataset**: Restaurant reviews with sentiment labels
+- **Approach**: Text preprocessing, Bag of Words, basic classification
+- **Use Case**: Introduction to NLP fundamentals
+
+### 2. **Bag of Words and TF-IDF Deep Dive**
+- **File**: `02_bag_of_words_tfidf.ipynb`
+- **Concept**: Compare BoW vs TF-IDF feature extraction methods
+- **Dataset**: Movie reviews for sentiment analysis
 - **Approach**: 
-  - Text preprocessing and cleaning
-  - Bag of Words feature extraction
-  - Machine learning classification
-- **Use Case**: Understanding customer opinions, brand monitoring, market research
+  - Detailed comparison of feature extraction techniques
+  - Multiple algorithm testing
+  - Feature importance analysis
+- **Use Case**: Understanding text vectorization fundamentals
 
-## 📁 Dataset
+### 3. **Advanced Sentiment Analysis**
+- **File**: `03_sentiment_analysis_advanced.ipynb`
+- **Concept**: Comprehensive sentiment analysis with multiple algorithms
+- **Dataset**: Extended movie reviews dataset
+- **Approach**:
+  - Advanced text preprocessing techniques
+  - Multiple classification algorithms comparison
+  - ROC curve analysis and feature importance
+- **Use Case**: Production-ready sentiment analysis systems
 
-- **`restaurant_reviews.tsv`**: Restaurant customer reviews dataset
-  - Tab-separated values format
-  - Contains customer reviews and sentiment labels (0=negative, 1=positive)
-  - Perfect for learning text classification fundamentals
-  - Real-world application for business intelligence
-  - Demonstrates common NLP preprocessing challenges
+### 4. **Multi-Class Text Classification**
+- **File**: `04_text_classification_advanced.ipynb`
+- **Concept**: News categorization and spam detection
+- **Dataset**: Multi-category news articles and email spam dataset
+- **Approach**:
+  - Multi-class classification strategies
+  - Handling imbalanced datasets
+  - Cross-validation and model evaluation
+- **Use Case**: Content categorization, email filtering, document classification
+
+## 📁 Datasets and Structure
+
+```
+05_natural_language_processing/
+├── README.md                                     # This comprehensive guide
+├── notebooks/
+│   ├── 01_natural_language_processing.ipynb     # NLP fundamentals
+│   ├── 02_bag_of_words_tfidf.ipynb             # Feature extraction comparison
+│   ├── 03_sentiment_analysis_advanced.ipynb     # Advanced sentiment analysis
+│   └── 04_text_classification_advanced.ipynb    # Multi-class classification
+└── data/
+    └── [Various text datasets for different NLP tasks]
+```
+
+### **Datasets Used:**
+- **Restaurant Reviews**: Basic sentiment analysis dataset
+- **Movie Reviews**: Extended sentiment analysis with advanced techniques
+- **News Articles**: Multi-class categorization (Technology, Sports, Health, Business, Entertainment)
+- **Email Dataset**: Spam vs legitimate email classification
+- **Generated Datasets**: Comprehensive examples for learning different NLP concepts
 
 ## 🛠️ Text Preprocessing Techniques
 
@@ -172,19 +211,34 @@ NLP combines computational linguistics with machine learning and deep learning t
    - Understand model strengths and limitations
    - Learn to improve text classification performance
 
-## 🔬 Advanced NLP Concepts
+## 🎯 Algorithms and Techniques Covered
 
-### **Modern Approaches:**
-- **Word Embeddings**: Word2Vec, GloVe for semantic representation
-- **Deep Learning**: RNNs, LSTMs for sequential text processing
-- **Transformer Models**: BERT, GPT for advanced language understanding
-- **Attention Mechanisms**: Focus on relevant parts of text
+### **Text Preprocessing Techniques:**
+- **Text Cleaning**: Remove special characters, normalize text
+- **Tokenization**: Split text into individual words/tokens
+- **Stop Words Removal**: Filter out common words
+- **Stemming & Lemmatization**: Reduce words to root forms
+- **N-gram Analysis**: Capture word sequences and context
 
-### **Advanced Applications:**
-- **Named Entity Recognition**: Identify people, places, organizations
-- **Question Answering**: Build systems that answer questions
-- **Text Generation**: Create human-like text automatically
-- **Language Modeling**: Predict next words in sequences
+### **Feature Extraction Methods:**
+- **Bag of Words (BoW)**: Simple word frequency counting
+- **TF-IDF**: Term Frequency-Inverse Document Frequency weighting
+- **N-grams**: Unigrams, bigrams, trigrams for context
+- **Advanced Vectorization**: Custom preprocessing and feature selection
+
+### **Classification Algorithms:**
+- **Naive Bayes**: Multinomial and Bernoulli variants
+- **Logistic Regression**: Linear classification with interpretability
+- **Support Vector Machines**: SVM with One-vs-Rest for multi-class
+- **Random Forest**: Ensemble method for robust classification
+- **Cross-validation**: Stratified K-fold for reliable evaluation
+
+### **Advanced Concepts:**
+- **Multi-class Classification**: Handle multiple text categories
+- **Imbalanced Datasets**: Techniques for handling class imbalance
+- **Feature Importance Analysis**: Understand model decisions
+- **ROC Curve Analysis**: Evaluate binary classification performance
+- **Spam Detection**: Real-world email filtering application
 
 ## 🌍 Why NLP Matters
 

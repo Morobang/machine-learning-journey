@@ -60,14 +60,37 @@ This repository is organized by **machine learning paradigms** to provide a logi
 
 ### 📝 **05_natural_language_processing**
 **Processing and understanding text**
-- Text Preprocessing
-- Sentiment Analysis
+- Text Preprocessing and Feature Extraction
+- Bag of Words and TF-IDF
+- Sentiment Analysis (Basic and Advanced)
+- Multi-class Text Classification
+
+### 🌳 **07_ensemble_methods**
+**Combining multiple models for better performance**
+- Bagging and Bootstrap Aggregating
+- Random Forest Deep Dive
+- Boosting Algorithms (AdaBoost, Gradient Boosting)
+- XGBoost and LightGBM
+- Stacking and Voting Classifiers
+
+### ⏰ **08_time_series_analysis**
+**Analyzing and forecasting time-dependent data**
+- Time Series Fundamentals and Components
+- Traditional Forecasting (ARIMA, Exponential Smoothing)
+- Machine Learning for Time Series
+- Advanced Methods (Prophet, LSTM)
+
+### 🎯 **09_dimensionality_reduction**
+**Reducing feature complexity while preserving information**
+- Principal Component Analysis (PCA)
+- Linear Discriminant Analysis (LDA)
+- Kernel PCA for Non-linear Reduction
 
 ### ⚙️ **06_model_selection_and_evaluation**
-**Optimizing and evaluating models**
-- Cross-Validation
-- Grid Search
-- XGBoost
+**Optimizing and evaluating models (Advanced Final Section)**
+- Cross-Validation Techniques
+- Grid Search and Hyperparameter Tuning
+- XGBoost and Advanced Model Selection
 
 ## 🛠️ Setup and Installation
 
@@ -107,7 +130,8 @@ conda activate ml-journey
 ### **Learning Path:**
 ```
 Foundations → Supervised Learning → Unsupervised Learning → 
-Reinforcement Learning → Deep Learning → NLP → Model Selection
+Reinforcement Learning → Deep Learning → NLP → Ensemble Methods → 
+Time Series → Dimensionality Reduction → Model Selection & Evaluation
 ```
 
 ## 📊 Key Features
@@ -135,21 +159,23 @@ By completing this journey, you will:
 
 ```
 machine-learning-journey/
-├── 00_foundations/           # ML basics and data preprocessing
-├── 01_supervised_learning/   # Algorithms with labeled data
-│   ├── regression/          # Continuous target prediction
-│   └── classification/      # Categorical target prediction
-├── 02_unsupervised_learning/ # Algorithms without labels
-│   ├── clustering/          # Finding groups in data
-│   ├── association_rules/   # Finding item relationships
-│   └── dimensionality_reduction/ # Feature reduction
-├── 03_reinforcement_learning/ # Learning through interaction
-├── 04_deep_learning/         # Neural networks
-├── 05_natural_language_processing/ # Text analysis
-├── 06_model_selection_and_evaluation/ # Model optimization
-├── docs/                    # Additional documentation
-├── projects/                # End-to-end ML projects
-└── utils/                   # Helper functions and utilities
+├── 00_foundations/                    # ML basics and data preprocessing
+├── 01_supervised_learning/            # Algorithms with labeled data
+│   ├── 01_regression/                # Continuous target prediction
+│   └── 02_classification/            # Categorical target prediction
+├── 02_unsupervised_learning/          # Algorithms without labels
+│   ├── clustering/                   # Finding groups in data
+│   └── association_rules/            # Finding item relationships
+├── 03_reinforcement_learning/         # Learning through interaction
+├── 04_deep_learning/                  # Neural networks
+├── 05_natural_language_processing/    # Text analysis and NLP
+├── 07_ensemble_methods/               # Combining multiple models
+├── 08_time_series_analysis/           # Time-dependent data analysis
+├── 09_dimensionality_reduction/       # Feature reduction techniques
+├── 06_model_selection_and_evaluation/ # Model optimization (Final)
+├── docs/                             # Additional documentation
+├── projects/                         # End-to-end ML projects
+└── utils/                            # Helper functions and utilities
 ```
 
 ## 🤝 Contributing
