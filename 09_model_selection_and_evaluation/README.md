@@ -1,217 +1,124 @@
-# ⚙️ Model Selection and Evaluation
+# Model Selection and Evaluation
 
-Model Selection and Evaluation is a crucial aspect of machine learning that focuses on choosing the best model, optimizing its performance, and properly assessing its capabilities. This section covers advanced techniques for improving model performance and ensuring robust evaluation.
+Every machine learning model has two kinds of parameters: the weights learned from data (learned during training) and the hyperparameters you set before training (learning rate, number of trees, regularisation strength). Model selection is the process of finding the right hyperparameters and the right algorithm. Model evaluation is the process of estimating how well the chosen model will perform on data it has never seen.
 
-## 🎯 What is Model Selection and Evaluation?
-
-Model Selection involves choosing the best algorithm and hyperparameters for your specific problem, while Model Evaluation ensures you accurately measure and understand your model's performance. Together, they form the foundation of building reliable, production-ready machine learning systems.
-
-### **Key Components:**
-- **Cross-Validation**: Robust performance estimation techniques
-- **Hyperparameter Tuning**: Optimizing model parameters
-- **Model Comparison**: Systematically comparing different approaches
-- **Performance Metrics**: Comprehensive evaluation measurements
-- **Overfitting Prevention**: Ensuring models generalize well
-
-## 🔄 Model Selection Process
-
-1. **Problem Definition**: Clearly define the task and success metrics
-2. **Model Candidates**: Select potential algorithms to evaluate
-3. **Cross-Validation**: Assess performance using robust validation techniques
-4. **Hyperparameter Optimization**: Fine-tune model parameters
-5. **Final Evaluation**: Test best model on held-out test set
-6. **Model Interpretation**: Understand what the model learned
-7. **Deployment Preparation**: Ensure model is production-ready
-
-## 📊 Techniques in This Section
-
-### 1. **K-Fold Cross-Validation**
-- **File**: `01_k_fold_cross_validation.ipynb`
-- **Concept**: Robust model evaluation using multiple train/validation splits
-- **Approach**: Divide data into k folds, train on k-1, validate on 1
-- **Benefits**: 
-  - More reliable performance estimates
-  - Better use of limited data
-  - Reduces variance in performance metrics
-- **Use Case**: Standard practice for model evaluation and comparison
-
-### 2. **Grid Search Optimization**
-- **File**: `02_grid_search.ipynb`
-- **Concept**: Systematic hyperparameter optimization
-- **Approach**: Test all combinations of specified parameter values
-- **Benefits**:
-  - Exhaustive search of parameter space
-  - Finds optimal parameter combinations
-  - Combined with cross-validation for robust optimization
-- **Use Case**: Fine-tuning model performance for maximum accuracy
-
-### 3. **XGBoost - Extreme Gradient Boosting**
-- **File**: `03_xgboost.ipynb`
-- **Concept**: Advanced ensemble method using gradient boosting
-- **Approach**: Sequentially build weak learners to correct previous errors
-- **Benefits**:
-  - Often achieves state-of-the-art performance
-  - Handles missing values automatically
-  - Built-in regularization prevents overfitting
-- **Use Case**: High-performance modeling for competitions and production
-
-## 📁 Datasets
-
-- **Social Network Ads**: Customer demographic and purchasing behavior data
-  - Perfect for demonstrating classification techniques
-  - Allows comparison across different model selection approaches
-  - Shows practical business application of model optimization
-
-## 🔄 Learning Progression
-
-### **1. Master Cross-Validation**:
-- Understand why single train/test splits are insufficient
-- Learn different cross-validation strategies (k-fold, stratified, time series)
-- Practice interpreting cross-validation results
-- Understand bias-variance trade-offs in model evaluation
-
-### **2. Optimize with Grid Search**:
-- Learn systematic hyperparameter optimization
-- Understand the curse of dimensionality in parameter space
-- Practice combining grid search with cross-validation
-- Learn to interpret optimization results
-
-### **3. Advanced Modeling with XGBoost**:
-- Understand ensemble methods and boosting
-- Learn advanced model features (regularization, early stopping)
-- Practice with a high-performance algorithm
-- Understand when to use gradient boosting
-
-### **4. Integrate Everything**:
-- Combine all techniques for comprehensive model development
-- Learn to build robust ML pipelines
-- Practice end-to-end model selection workflows
-
-## 📏 Comprehensive Evaluation Framework
-
-### **Cross-Validation Metrics:**
-- **Mean CV Score**: Average performance across folds
-- **Standard Deviation**: Consistency of performance
-- **Confidence Intervals**: Statistical significance of results
-- **Learning Curves**: Performance vs training set size
-
-### **Hyperparameter Optimization:**
-- **Best Parameters**: Optimal hyperparameter combination
-- **Parameter Sensitivity**: How much each parameter affects performance
-- **Optimization History**: Path to optimal parameters
-- **Convergence Analysis**: Whether search found global optimum
-
-### **Model Comparison:**
-- **Performance Rankings**: Which models perform best
-- **Statistical Significance**: Are differences meaningful?
-- **Computational Efficiency**: Training and prediction time
-- **Interpretability**: How understandable is the model?
-
-## 💡 Key Concepts to Master
-
-### **Cross-Validation Strategies:**
-- **K-Fold**: Standard approach for most problems
-- **Stratified K-Fold**: Maintains class distribution in each fold
-- **Leave-One-Out**: Maximum data usage for small datasets
-- **Time Series Split**: Respects temporal order in time series data
-
-### **Hyperparameter Optimization:**
-- **Grid Search**: Exhaustive search of specified parameters
-- **Random Search**: Random sampling of parameter space
-- **Bayesian Optimization**: Smart search using probabilistic models
-- **Hyperband**: Multi-fidelity optimization for efficiency
-
-### **Ensemble Methods:**
-- **Bagging**: Bootstrap aggregating (Random Forest)
-- **Boosting**: Sequential error correction (XGBoost, AdaBoost)
-- **Stacking**: Combining different model types
-- **Voting**: Simple combination strategies
-
-### **Performance Considerations:**
-- **Bias-Variance Trade-off**: Understanding model complexity
-- **Overfitting Detection**: Identifying when models memorize training data
-- **Regularization**: Techniques to prevent overfitting
-- **Early Stopping**: Preventing overtraining in iterative algorithms
-
-## 🎯 Real-World Applications
-
-### **Model Selection in Practice:**
-- **A/B Testing**: Comparing model performance in production
-- **AutoML Systems**: Automated model selection and optimization
-- **Competition Winning**: Kaggle and data science competitions
-- **Production Deployment**: Ensuring models work reliably at scale
-
-### **Business Impact:**
-- **Risk Management**: Selecting models with consistent performance
-- **Resource Optimization**: Balancing accuracy with computational cost
-- **Regulatory Compliance**: Ensuring models meet auditing requirements
-- **Continuous Improvement**: Systematically improving model performance
-
-## 🚀 Getting Started
-
-### **1. Start with Cross-Validation** (`01_k_fold_cross_validation.ipynb`):
-- Learn why proper evaluation matters
-- Understand different cross-validation strategies
-- Practice interpreting cross-validation results
-- Compare with simple train/test splits
-
-### **2. Optimize with Grid Search** (`02_grid_search.ipynb`):
-- Learn systematic hyperparameter tuning
-- Understand parameter space exploration
-- Practice combining optimization with validation
-- Learn to interpret optimization results
-
-### **3. Master XGBoost** (`03_xgboost.ipynb`):
-- Understand gradient boosting algorithms
-- Learn advanced ensemble techniques
-- Practice with state-of-the-art algorithms
-- Understand feature importance and interpretability
-
-### **4. Build Complete Pipelines**:
-- Integrate all techniques into cohesive workflows
-- Practice end-to-end model development
-- Learn production-ready model selection
-
-## 🔬 Advanced Topics
-
-### **Automated Machine Learning (AutoML):**
-- **Automated Feature Engineering**: Systematic feature creation
-- **Neural Architecture Search**: Optimizing deep learning architectures
-- **Multi-Objective Optimization**: Balancing accuracy, speed, and interpretability
-- **Meta-Learning**: Learning to learn from previous experiments
-
-### **Advanced Evaluation:**
-- **Nested Cross-Validation**: Unbiased hyperparameter optimization
-- **Statistical Testing**: Rigorous model comparison
-- **Fairness Metrics**: Ensuring equitable model performance
-- **Uncertainty Quantification**: Understanding model confidence
-
-### **Production Considerations:**
-- **Model Monitoring**: Detecting performance degradation
-- **A/B Testing**: Comparing models in production
-- **Shadow Deployment**: Safe model testing strategies
-- **Model Versioning**: Managing model updates
-
-## 🎪 Why This Section Matters
-
-### **Scientific Rigor:**
-- **Reproducible Results**: Ensuring experiments can be replicated
-- **Statistical Validity**: Using proper statistical methods
-- **Unbiased Evaluation**: Avoiding optimistic performance estimates
-- **Systematic Comparison**: Fair evaluation of different approaches
-
-### **Business Value:**
-- **Risk Reduction**: Deploying models that actually work
-- **Cost Optimization**: Choosing efficient models
-- **Performance Maximization**: Getting the best possible results
-- **Continuous Improvement**: Systematic model enhancement
-
-### **Professional Development:**
-- **Best Practices**: Industry-standard model development
-- **Competition Skills**: Techniques used in data science competitions
-- **Research Methods**: Academic-quality experimental design
-- **Production Readiness**: Skills needed for real-world deployment
+Done naively, both introduce **data leakage**: optimistic performance estimates that collapse when the model meets real-world data. This section is about doing both correctly.
 
 ---
 
-**Ready to build robust, optimized models?** Start with cross-validation and master the art of model selection! ⚙️🚀
+## The Core Problem: Optimistic Estimates
+
+A single train/test split gives you one estimate of performance — and that estimate depends on which rows happened to land in the test set. With 20% test data from 500 rows, you have 100 test examples. Swap a few of those rows and the accuracy estimate shifts by several percent. A single split is noisy.
+
+**The naive solution is also wrong:** evaluate every candidate model on the test set and pick the best. Now the test set has been used to make a decision — it is no longer independent. The performance of the selected model on "test" data is optimistic. You have implicitly overfit to the test set through your model selection process.
+
+The correct solution is **cross-validation for evaluation** and **nested cross-validation for hyperparameter tuning**.
+
+---
+
+## Techniques in This Section
+
+### K-Fold Cross-Validation
+**Notebook:** [01_k_fold_cross_validation.ipynb](notebooks/01_k_fold_cross_validation.ipynb) | **Guide:** [teaching/01_k_fold_cross_validation.md](teaching/01_k_fold_cross_validation.md)
+
+K-fold CV splits the training data into k equal folds. The model trains on k−1 folds and is evaluated on the held-out fold. This repeats k times, each fold acting as the validation set exactly once. Final performance = mean ± standard deviation across k estimates.
+
+```
+k = 5:
+Fold 1: Train [2,3,4,5] → Validate [1]
+Fold 2: Train [1,3,4,5] → Validate [2]
+Fold 3: Train [1,2,4,5] → Validate [3]
+Fold 4: Train [1,2,3,5] → Validate [4]
+Fold 5: Train [1,2,3,4] → Validate [5]
+Average the 5 validation scores → stable estimate
+```
+
+**Why it works:** Every row appears in the validation set exactly once, so the full dataset contributes to evaluation. The mean score has lower variance than a single split. The standard deviation reveals whether performance is consistent or highly sensitive to which data the model trains on.
+
+**The bias-variance trade-off in k:** Large k (e.g., k=10, or leave-one-out) gives nearly unbiased estimates but high variance across folds and slow runtime. Small k (e.g., k=5) gives slightly biased but more stable estimates and runs faster. k=5 or k=10 are standard choices for most datasets.
+
+**Use when:** Comparing algorithms, estimating generalisation performance, or deciding whether a model is ready. Any time you need a reliable performance number rather than a lucky split.
+
+**Watch out for:** For classification with imbalanced classes, use **Stratified K-Fold** — it ensures each fold has the same class distribution as the full dataset. For time series, use walk-forward splits instead (see [07_time_series_analysis](../07_time_series_analysis/)).
+
+---
+
+### Grid Search with Cross-Validation
+**Notebook:** [02_grid_search.ipynb](notebooks/02_grid_search.ipynb) | **Guide:** [teaching/02_grid_search_hyperparameter_tuning.md](teaching/02_grid_search_hyperparameter_tuning.md)
+
+Grid search exhaustively evaluates every combination of hyperparameter values you specify. Combined with k-fold CV, each combination is evaluated on k separate validation sets, giving a reliable estimate of how well that configuration generalises.
+
+```
+SVM example:
+C values:     [0.1, 1, 10, 100]
+kernel types: ['linear', 'rbf']
+gamma values: [0.01, 0.1, 1]
+
+Grid: 4 × 2 × 3 = 24 combinations
+Each evaluated with 10-fold CV = 240 model fits
+```
+
+`GridSearchCV` in scikit-learn handles this in one call: it fits, evaluates, and returns `best_params_` and `best_estimator_` automatically.
+
+**The data leakage trap.** When you use grid search to select hyperparameters, the validation score for each combination is an honest estimate. But the *best* combination was selected by comparing validation scores — the best score is still optimistic. To get an unbiased final estimate of the selected model:
+
+```
+Nested CV pattern:
+Outer loop: k-fold CV for final performance estimate
+  Inner loop: GridSearchCV to select hyperparameters
+The outer loop score is unbiased because the inner loop (selection)
+is never allowed to see the outer fold's test rows.
+```
+
+For the final production model, refit on all training data using the best hyperparameters found.
+
+**Random search** samples hyperparameter combinations randomly rather than exhaustively. For large search spaces, random search finds good configurations faster than grid search — searching 100 random combinations covers more of a 5-parameter space than a 4×5 grid covering the same budget.
+
+**Bayesian optimisation** uses results from evaluated combinations to decide which region of the parameter space to search next. It is more efficient than random search on expensive models but adds implementation complexity.
+
+**Use when:** Tuning any model with hyperparameters that meaningfully affect performance. Always combine with cross-validation — never tune on the test set.
+
+**Watch out for:** Grid search runtime grows exponentially with the number of parameters and values. Start with a coarse grid (few values, wide range) to find the right region, then a fine grid to narrow down. For models with many hyperparameters (XGBoost, neural networks), prefer random search or Bayesian optimisation.
+
+---
+
+## Choosing a Validation Strategy
+
+```
+How large is your dataset?
+├── Small (< 1,000 rows)
+│   └── Use k=10 or leave-one-out CV (maximise data usage)
+├── Medium (1,000 – 100,000 rows)
+│   └── Use k=5 or k=10 CV (standard choice)
+└── Large (> 100,000 rows)
+    └── Simple train/validation split is often sufficient
+        CV still useful but each fit is expensive
+
+Is the target class imbalanced?
+└── Yes → Stratified K-Fold at every level
+
+Is the data time-ordered?
+└── Yes → Walk-forward splits (see 07_time_series_analysis)
+
+Are you tuning hyperparameters?
+└── Yes → Nest the CV: GridSearchCV inside an outer CV loop
+```
+
+---
+
+## What the Teaching Guides Cover
+
+[teaching/01_k_fold_cross_validation.md](teaching/01_k_fold_cross_validation.md) — why single train/test splits are insufficient, the bias-variance trade-off in CV estimates, stratified CV for imbalanced classes, leave-one-out CV, and the walk-forward variant for time series.
+
+[teaching/02_grid_search_hyperparameter_tuning.md](teaching/02_grid_search_hyperparameter_tuning.md) — the hyperparameter vs learned parameter distinction, grid search mechanics, data leakage through model selection, nested CV, random search and when to prefer it over grid search, and Bayesian optimisation concepts.
+
+---
+
+## Relationship to the Rest of This Repository
+
+Cross-validation and grid search are not standalone topics — they are the infrastructure every other section depends on. When a regression or classification notebook reports a test-set accuracy, cross-validation is how you trust that number. When an ensemble method notebook tunes `n_estimators` or `max_depth`, grid search is the tool.
+
+- **All supervised learning notebooks** ([01_supervised_learning](../01_supervised_learning/)) benefit from CV-based evaluation
+- **Ensemble methods** ([06_ensemble_methods](../06_ensemble_methods/)) have more hyperparameters than simpler models and require careful tuning
+- **Time series** ([07_time_series_analysis](../07_time_series_analysis/)) uses a modified CV strategy — walk-forward splits
+- **Dimensionality reduction** ([08_dimensionality_reduction](../08_dimensionality_reduction/)) requires that PCA/LDA be fit inside the CV loop, not before it, to prevent leakage

@@ -1,285 +1,131 @@
 # Time Series Analysis
 
-## 📚 Overview
+Time series analysis deals with data collected sequentially over time — stock prices recorded daily, temperature measured hourly, monthly sales revenue, quarterly GDP figures. The defining characteristic: **the order of observations matters**. Yesterday's temperature is relevant to today's; last month's sales inform this month's.
 
-Time series analysis focuses on data that is ordered by time, where observations are collected sequentially over time. This section covers fundamental concepts, techniques, and algorithms for analyzing and forecasting time-dependent data.
-
-## 🎯 Learning Objectives
-
-By completing this section, you will understand:
-- **Time series data characteristics and components**
-- **How to preprocess and visualize time series data**
-- **Traditional forecasting methods (ARIMA, exponential smoothing)**
-- **Machine learning approaches for time series**
-- **How to evaluate time series forecasting models**
-
-## 📁 Structure
-
-```
-07_time_series_analysis/
-├── README.md                              # This guide
-├── notebooks/
-│   ├── 01_time_series_fundamentals.ipynb
-│   ├── 02_arima_and_exponential_smoothing.ipynb
-│   └── 03_lstm_time_series_forecasting.ipynb
-└── data/
-    └── (uses datasets from data/medium/)
-```
-
-> **Status:** Notebooks in progress. The theory content in this README is complete.
-> Prerequisites: [01 — Supervised Learning](../01_supervised_learning/), [04 — Deep Learning](../04_deep_learning/) (for LSTM notebook)
-
-## ⏳ Time Series Components
-
-### **1. Trend**
-- **Definition**: Long-term movement in the data
-- **Types**: Upward, downward, or no trend
-- **Detection**: Moving averages, linear regression
-- **Examples**: Population growth, stock price trends
-
-### **2. Seasonality**
-- **Definition**: Regular patterns that repeat over known periods
-- **Types**: Daily, weekly, monthly, yearly patterns
-- **Detection**: Seasonal decomposition, autocorrelation
-- **Examples**: Ice cream sales (summer peaks), electricity usage
-
-### **3. Cyclical Patterns**
-- **Definition**: Irregular fluctuations with no fixed period
-- **Characteristics**: Longer duration than seasonality
-- **Detection**: Spectral analysis, long-term correlation
-- **Examples**: Business cycles, economic expansions/contractions
-
-### **4. Irregular/Random Component**
-- **Definition**: Random fluctuations after removing trend and seasonality
-- **Characteristics**: Unpredictable, noise-like behavior
-- **Importance**: Represents unexplained variation
-- **Treatment**: Smoothing, filtering techniques
-
-## 📊 Time Series Patterns
-
-### **Stationary vs Non-Stationary**
-- **Stationary**: Constant mean, variance, and autocorrelation over time
-- **Non-Stationary**: Statistical properties change over time
-- **Importance**: Many models require stationary data
-- **Transformation**: Differencing, log transformation, detrending
-
-### **Autocorrelation**
-- **Definition**: Correlation between observations at different time lags
-- **ACF**: Autocorrelation Function
-- **PACF**: Partial Autocorrelation Function
-- **Applications**: Model identification, lag selection
-
-## 🔮 Forecasting Methods
-
-### **1. Naive Methods**
-- **Simple Naive**: Use last observation as forecast
-- **Seasonal Naive**: Use last observation from same season
-- **Drift Method**: Naive with trend continuation
-- **Use Cases**: Baseline models, simple data patterns
-
-### **2. Exponential Smoothing**
-- **Simple Exponential Smoothing**: Weighted average with exponential decay
-- **Holt's Method**: Handles trend
-- **Holt-Winters**: Handles both trend and seasonality
-- **Parameters**: Alpha (level), beta (trend), gamma (seasonality)
-
-### **3. ARIMA Models**
-- **AR (AutoRegressive)**: Uses past values to predict future
-- **I (Integrated)**: Differencing to achieve stationarity
-- **MA (Moving Average)**: Uses past forecast errors
-- **ARIMA(p,d,q)**: Combines all three components
-
-### **4. Machine Learning Approaches**
-- **Linear Regression**: With time-based features
-- **Random Forest**: For non-linear patterns
-- **XGBoost**: High-performance gradient boosting
-- **Neural Networks**: LSTM, GRU for sequential patterns
-
-### **5. Advanced Methods**
-- **Prophet**: Facebook's forecasting tool
-- **LSTM Networks**: Deep learning for sequences
-- **Ensemble Methods**: Combining multiple forecasting models
-- **State Space Models**: Kalman filtering approaches
-
-## 📈 When to Use Each Method
-
-| Method | Best For | Advantages | Disadvantages |
-|--------|----------|------------|---------------|
-| **Naive** | Baseline, random walk data | Simple, fast | Poor accuracy |
-| **Exponential Smoothing** | Smooth trends, seasonality | Interpretable, robust | Limited complexity |
-| **ARIMA** | Stationary data, univariate | Statistical foundation | Requires stationarity |
-| **Machine Learning** | Complex patterns, features | Handles non-linearity | Needs feature engineering |
-| **Prophet** | Business data, holidays | Easy to use, handles missing data | Less flexible |
-| **LSTM** | Complex sequences | Captures long-term dependencies | Requires large data |
-
-## 🎯 Real-World Applications
-
-### **Business Forecasting**
-- **Sales Forecasting**: Predict future revenue and demand
-- **Inventory Management**: Optimize stock levels
-- **Financial Planning**: Budget and resource allocation
-- **Customer Analytics**: Predict customer behavior patterns
-
-### **Financial Markets**
-- **Stock Price Prediction**: Forecast market movements
-- **Risk Management**: Predict volatility and risk metrics
-- **Algorithmic Trading**: Automated trading strategies
-- **Economic Indicators**: GDP, inflation, employment forecasting
-
-### **Operations and Manufacturing**
-- **Production Planning**: Optimize manufacturing schedules
-- **Quality Control**: Monitor process variations
-- **Maintenance Scheduling**: Predict equipment failures
-- **Supply Chain**: Optimize logistics and procurement
-
-### **Scientific and Environmental**
-- **Weather Forecasting**: Predict temperature, precipitation
-- **Climate Analysis**: Long-term climate trends
-- **Energy Consumption**: Predict electricity demand
-- **Health Monitoring**: Disease outbreak prediction
-
-## 🔬 Time Series Preprocessing
-
-### **Data Cleaning**
-- **Missing Values**: Interpolation, forward/backward fill
-- **Outliers**: Detection and treatment
-- **Data Quality**: Consistency checks, duplicate removal
-- **Frequency Conversion**: Resampling to different time intervals
-
-### **Transformation Techniques**
-- **Log Transformation**: Stabilize variance
-- **Differencing**: Remove trend and achieve stationarity
-- **Scaling**: Normalize for multiple series comparison
-- **Decomposition**: Separate trend, seasonality, residuals
-
-### **Feature Engineering**
-- **Lag Features**: Past values as predictors
-- **Rolling Statistics**: Moving averages, standard deviations
-- **Date Features**: Year, month, day of week, holidays
-- **External Variables**: Weather, economic indicators
-
-## 📊 Model Evaluation
-
-### **Time Series Specific Metrics**
-- **MAE (Mean Absolute Error)**: Average absolute forecast errors
-- **RMSE (Root Mean Square Error)**: Penalizes large errors
-- **MAPE (Mean Absolute Percentage Error)**: Scale-independent metric
-- **SMAPE**: Symmetric MAPE for better handling of zeros
-
-### **Cross-Validation Strategies**
-- **Time Series Split**: Respect temporal order
-- **Rolling Window**: Fixed-size training windows
-- **Expanding Window**: Growing training sets
-- **Seasonal Cross-Validation**: Account for seasonal patterns
-
-### **Residual Analysis**
-- **White Noise Test**: Check if residuals are random
-- **Normality Test**: Assess residual distribution
-- **Autocorrelation**: Ensure no pattern in residuals
-- **Heteroscedasticity**: Check for constant variance
-
-## ⚡ Advanced Techniques
-
-### **Multivariate Time Series**
-- **Vector Autoregression (VAR)**: Multiple related series
-- **Cointegration**: Long-term relationships between series
-- **Granger Causality**: Causal relationships testing
-- **Dynamic Factor Models**: Common factors across series
-
-### **Non-Linear Methods**
-- **Threshold Models**: Different regimes for different ranges
-- **Regime Switching**: Markov switching models
-- **Neural Networks**: Deep learning for complex patterns
-- **Wavelet Analysis**: Time-frequency domain analysis
-
-### **Uncertainty Quantification**
-- **Prediction Intervals**: Confidence bounds for forecasts
-- **Probabilistic Forecasting**: Full probability distributions
-- **Bayesian Methods**: Incorporate prior knowledge
-- **Ensemble Forecasting**: Multiple model predictions
-
-## 🛠️ Tools and Libraries
-
-### **Python Libraries**
-- **pandas**: Time series data manipulation
-- **numpy**: Numerical computations
-- **matplotlib/seaborn**: Time series visualization
-- **statsmodels**: Statistical time series models
-- **scikit-learn**: Machine learning approaches
-- **prophet**: Facebook's forecasting tool
-- **tensorflow/keras**: Deep learning for sequences
-
-### **Specialized Libraries**
-- **arch**: GARCH models for volatility
-- **pyflux**: Bayesian time series models
-- **tsfresh**: Automated feature extraction
-- **sktime**: Scikit-learn compatible time series toolkit
-
-## 🎓 Learning Path
-
-### **Beginner Level**
-1. **Time Series Basics** → Understanding components and patterns
-2. **Data Visualization** → Plotting and exploring time series
-3. **Simple Forecasting** → Naive methods and moving averages
-
-### **Intermediate Level**
-1. **Exponential Smoothing** → Handling trend and seasonality
-2. **ARIMA Models** → Statistical forecasting methods
-3. **Model Evaluation** → Proper validation techniques
-
-### **Advanced Level**
-1. **Machine Learning** → ML approaches for forecasting
-2. **Deep Learning** → LSTM and advanced neural networks
-3. **Multivariate Analysis** → Multiple time series modeling
-
-## 🔍 Common Challenges
-
-### **Data Quality Issues**
-- **Missing Data**: Gaps in time series observations
-- **Irregular Spacing**: Non-uniform time intervals
-- **Multiple Frequencies**: Different sampling rates
-- **Outliers**: Extreme or anomalous observations
-
-### **Modeling Challenges**
-- **Non-Stationarity**: Changing statistical properties
-- **Seasonality**: Multiple seasonal patterns
-- **Structural Breaks**: Sudden changes in patterns
-- **Limited Data**: Short time series for modeling
-
-### **Evaluation Pitfalls**
-- **Look-Ahead Bias**: Using future information
-- **Wrong Cross-Validation**: Not respecting temporal order
-- **Overfitting**: Too complex models for available data
-- **Seasonal Adjustment**: Improper handling of seasonality
-
-## 📋 Best Practices
-
-### **Data Preparation**
-- ✅ Always visualize your data first
-- ✅ Check for stationarity before modeling
-- ✅ Handle missing values appropriately
-- ✅ Consider multiple time resolutions
-
-### **Modeling**
-- ✅ Start with simple baseline models
-- ✅ Use appropriate cross-validation
-- ✅ Consider multiple forecasting horizons
-- ✅ Validate assumptions through residual analysis
-
-### **Interpretation**
-- ✅ Understand model limitations
-- ✅ Provide prediction intervals
-- ✅ Consider external factors
-- ✅ Monitor model performance over time
-
-## 🚀 Future Trends
-
-- **Automated Time Series**: AutoML for forecasting
-- **Real-Time Analytics**: Streaming time series processing
-- **Hybrid Models**: Combining statistical and ML methods
-- **Explainable Forecasting**: Interpretable time series models
-- **Edge Computing**: Forecasting on IoT devices
+This temporal dependence is what separates time series from standard supervised learning, and it changes almost every aspect of how you work with the data: how you split train and test sets, how you cross-validate, which models to use, and how you evaluate forecasts.
 
 ---
 
-**Ready to predict the future from the past?** Start your time series analysis journey and unlock the patterns hidden in temporal data! ⏰📈
+## What Makes Time Series Different
+
+**You cannot shuffle the data.** In standard machine learning, rows are independent samples. In time series, each observation depends on previous ones. Shuffling destroys that structure — a model trained on shuffled time series is learning from future data to predict the past.
+
+**Train/test split respects time.** The test set must always be the most recent period. Never randomly assign rows to train and test.
+
+**Cross-validation uses a walk-forward approach:**
+```
+Fold 1: Train [t=1..100]  → Test [t=101..120]
+Fold 2: Train [t=1..120]  → Test [t=121..140]
+Fold 3: Train [t=1..140]  → Test [t=141..160]
+```
+Each fold's test set is always after the training set, simulating the real forecasting task.
+
+---
+
+## The Four Components of a Time Series
+
+Understanding these components is the first step in choosing the right model:
+
+**Trend** — the long-term direction. Sales growing 10% per year. Population increasing. A trend means the series is non-stationary (its mean changes over time).
+
+**Seasonality** — regular, calendar-driven patterns. Ice cream sales peak every summer. Website traffic spikes every Monday morning. Seasonality repeats with a known period.
+
+**Cyclical patterns** — irregular fluctuations with no fixed period. Economic expansion and contraction. These last years, not months, and their timing is not predictable from the calendar.
+
+**Irregular/residual** — what's left after removing trend, seasonality, and cycles. Random noise, one-off events, measurement error.
+
+Decomposing a series into these components both helps you understand it and guides model selection: a series with strong seasonality needs a model that can represent seasonal patterns.
+
+---
+
+## Stationarity
+
+Most classical time series models (ARIMA, exponential smoothing) assume the data is **stationary** — its statistical properties (mean, variance, autocorrelation) do not change over time.
+
+Most real series are **non-stationary** because of trend or seasonality. Standard transformations to achieve stationarity:
+
+- **Differencing** — subtract the previous value from each observation. One round of differencing removes a linear trend. Seasonal differencing (subtract the value from the same period last year) removes seasonality.
+- **Log transformation** — stabilises variance when the scale of fluctuations grows with the level (common in financial data).
+- **Detrending** — fit and subtract a trend line.
+
+After modelling, all transformations must be reversed to produce forecasts in the original scale.
+
+---
+
+## Forecasting Methods
+
+The teaching guide covers the full spectrum from simplest to most complex:
+
+### Baseline Methods
+Always compute these first. A forecast is only useful if it beats the baseline.
+
+- **Naive forecast** — next value = last observed value
+- **Seasonal naive** — next value = value from the same period last year
+- **Moving average** — next value = mean of the last k observations
+
+### Exponential Smoothing
+Weighted averages where recent observations receive exponentially more weight than older ones. Three variants handle progressively more complex patterns:
+
+- **Simple Exponential Smoothing** — for series with no trend, no seasonality
+- **Holt's Linear** — adds a trend component
+- **Holt-Winters** — adds both trend and seasonality
+
+No ARIMA identification needed; parameters are estimated by minimising forecast errors.
+
+### ARIMA
+**AutoRegressive Integrated Moving Average** — the classical statistical forecasting model for univariate stationary series:
+
+```
+ARIMA(p, d, q)
+  p = AR order: how many past values to include
+  d = differencing order: how many times to difference for stationarity
+  q = MA order: how many past forecast errors to include
+```
+
+The Box-Jenkins methodology uses ACF (autocorrelation function) and PACF (partial ACF) plots to identify appropriate p and q values. `auto_arima` from the `pmdarima` package automates this selection.
+
+### Machine Learning Approaches
+For series with complex patterns, external predictors (temperature, promotions, holidays), or multiple related series, machine learning often outperforms classical methods:
+
+- **Feature engineering** converts the time index into lag features, rolling statistics, and calendar features (day of week, month, holiday indicator)
+- Any regression algorithm (Random Forest, XGBoost, LightGBM) then treats it as a standard regression task
+- **Advantage:** can incorporate external variables naturally
+- **Limitation:** does not model time as a continuous process; requires careful feature engineering to capture temporal patterns
+
+### Deep Learning (LSTM)
+Long Short-Term Memory networks are recurrent neural networks designed for sequential data. They maintain a hidden state that carries information across many time steps, learning long-range dependencies that ARIMA cannot.
+
+Covered theoretically here; implementation requires the deep learning foundations from [04_deep_learning](../04_deep_learning/).
+
+---
+
+## Forecasting Evaluation Metrics
+
+Unlike classification or regression, time series evaluation must account for the **forecast horizon** (how far ahead are we predicting?) and the **baseline difficulty** of the series.
+
+| Metric | Formula | Note |
+|--------|---------|------|
+| **MAE** | mean(|yₜ − ŷₜ|) | Same units as the series; interpretable |
+| **RMSE** | √mean((yₜ − ŷₜ)²) | Penalises large errors more; useful when spikes are costly |
+| **MAPE** | mean(|yₜ − ŷₜ| / |yₜ|) × 100 | Percentage error; undefined when yₜ = 0 |
+| **SMAPE** | mean(2|yₜ − ŷₜ| / (|yₜ| + |ŷₜ|)) | Symmetric version of MAPE; handles zeros better |
+
+**Always compare against a baseline.** A model with MAPE = 8% looks good — until you notice the naive forecast achieves MAPE = 7%. A forecast that does not beat the naive baseline provides no value.
+
+---
+
+## Current Status
+
+Notebooks for this section are in development. The teaching guide covers all concepts in full:
+
+**Guide:** [teaching/01_time_series_fundamentals.md](teaching/01_time_series_fundamentals.md) — time series components, stationarity tests (ADF test), decomposition, ACF/PACF interpretation, the full spectrum of forecasting methods, cross-validation strategies, and evaluation.
+
+---
+
+## Relationship to the Rest of This Repository
+
+Time series analysis draws on techniques from across the repo:
+- **Feature scaling** from [00_foundations](../00_foundations/) applies when using ML approaches
+- **Regression models** from [01_supervised_learning/01_regression](../01_supervised_learning/01_regression/) are the base algorithms when using ML for forecasting
+- **Cross-validation strategy** from [09_model_selection_and_evaluation](../09_model_selection_and_evaluation/) must be adapted to the walk-forward scheme
+- **LSTM** builds directly on the ANN foundations in [04_deep_learning](../04_deep_learning/)
