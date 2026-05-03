@@ -1,4 +1,4 @@
-# 🌳 Part 7: Ensemble Methods
+# Ensemble Methods
 
 ## 📚 Overview
 
@@ -16,17 +16,19 @@ By completing this section, you will understand:
 ## 📁 Structure
 
 ```
-07_ensemble_methods/
-├── README.md                           # This comprehensive guide
+06_ensemble_methods/
+├── README.md                           # This guide
 ├── notebooks/
-│   ├── 01_bagging_bootstrap.ipynb      # Bootstrap Aggregating (Bagging)
-│   ├── 02_random_forest_deep_dive.ipynb # Random Forest implementation
-│   ├── 03_boosting_algorithms.ipynb    # AdaBoost, Gradient Boosting
-│   ├── 04_xgboost_lightgbm.ipynb      # Advanced gradient boosting
-│   └── 05_stacking_voting.ipynb       # Model stacking and voting
+│   ├── 01_bagging_and_random_forest.ipynb
+│   ├── 02_adaboost_gradient_boosting.ipynb
+│   ├── 03_xgboost_lightgbm.ipynb
+│   └── 04_stacking_and_voting.ipynb
 └── data/
-    └── [Various datasets for ensemble learning]
+    └── (uses datasets from data/medium/)
 ```
+
+> **Status:** Notebooks in progress. The theory content in this README is complete.
+> Prerequisites: [01 — Supervised Learning](../01_supervised_learning/) (Decision Trees, Random Forest)
 
 ## 🎯 Ensemble Methods Covered
 

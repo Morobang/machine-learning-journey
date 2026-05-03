@@ -1,0 +1,47 @@
+[project]
+name = "machine-learning-journey"
+version = "0.1.0"
+description = "A structured beginner-to-advanced machine learning curriculum with theory, notebooks, and end-to-end projects."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Morobang Tshigidimisa", email = "morobangtshigidimisa@gmail.com" }]
+keywords = ["machine-learning", "data-science", "education", "jupyter", "scikit-learn"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  | Machine-Learning-A-Z-Codes-Datasets
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip_glob = ["Machine-Learning-A-Z-Codes-Datasets/*"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = ["Machine-Learning-A-Z-Codes-Datasets", ".venv", "build"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*", "Machine-Learning-A-Z-Codes-Datasets/*"]

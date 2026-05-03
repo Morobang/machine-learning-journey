@@ -1,4 +1,4 @@
-# ⏰ Part 8: Time Series Analysis
+# Time Series Analysis
 
 ## 📚 Overview
 
@@ -16,17 +16,18 @@ By completing this section, you will understand:
 ## 📁 Structure
 
 ```
-08_time_series_analysis/
-├── README.md                              # This comprehensive guide
+07_time_series_analysis/
+├── README.md                              # This guide
 ├── notebooks/
-│   ├── 01_time_series_fundamentals.ipynb  # Basic concepts and visualization
-│   ├── 02_time_series_preprocessing.ipynb # Data cleaning and preparation
-│   ├── 03_traditional_forecasting.ipynb   # ARIMA, Exponential Smoothing
-│   ├── 04_ml_for_time_series.ipynb       # Machine learning approaches
-│   └── 05_advanced_forecasting.ipynb     # Prophet, LSTM, ensemble methods
+│   ├── 01_time_series_fundamentals.ipynb
+│   ├── 02_arima_and_exponential_smoothing.ipynb
+│   └── 03_lstm_time_series_forecasting.ipynb
 └── data/
-    └── [Various time series datasets]
+    └── (uses datasets from data/medium/)
 ```
+
+> **Status:** Notebooks in progress. The theory content in this README is complete.
+> Prerequisites: [01 — Supervised Learning](../01_supervised_learning/), [04 — Deep Learning](../04_deep_learning/) (for LSTM notebook)
 
 ## ⏳ Time Series Components
 

@@ -1,204 +1,202 @@
-# 🚀 Machine Learning Journey
+# Machine Learning Journey
 
-A comprehensive, hands-on learning journey through Machine Learning fundamentals to advanced concepts. This repository documents my progression from basic ML concepts to complex algorithms, organized by learning paradigms for optimal educational flow.
-
-## 📚 Repository Structure
-
-This repository is organized by **machine learning paradigms** to provide a logical learning progression:
-
-### 🎯 **00_foundations**
-**Essential ML concepts and data preprocessing**
-- **Theory**: Core ML concepts, types, lifecycle, tools
-- **Notebooks**: Data preprocessing techniques
-- **Data**: Sample datasets for learning
-
-### 🎓 **01_supervised_learning**
-**Learning with labeled data**
-
-#### **Regression** (Predicting continuous values)
-- Simple Linear Regression
-- Multiple Linear Regression
-- Polynomial Regression
-- Support Vector Regression (SVR)
-- Decision Tree Regression
-- Random Forest Regression
-
-#### **Classification** (Predicting categories)
-- Logistic Regression
-- K-Nearest Neighbors (K-NN)
-- Support Vector Machine (SVM)
-- Kernel SVM
-- Naive Bayes
-- Decision Tree Classification
-- Random Forest Classification
-
-### 🔍 **02_unsupervised_learning**
-**Learning without labeled data**
-
-#### **Clustering** (Finding groups)
-- K-Means Clustering
-- Hierarchical Clustering
-
-#### **Association Rules** (Finding relationships)
-- Apriori Algorithm
-- Eclat Algorithm
-
-#### **Dimensionality Reduction** (Reducing features)
-- Principal Component Analysis (PCA)
-- Linear Discriminant Analysis (LDA)
-- Kernel PCA
-
-### 🎮 **03_reinforcement_learning**
-**Learning through rewards and actions**
-- Upper Confidence Bound (UCB)
-- Thompson Sampling
-
-### 🧠 **04_deep_learning**
-**Neural networks for complex patterns**
-- Artificial Neural Networks (ANN)
-- Convolutional Neural Networks (CNN)
-
-### 📝 **05_natural_language_processing**
-**Processing and understanding text**
-- Text Preprocessing and Feature Extraction
-- Bag of Words and TF-IDF
-- Sentiment Analysis (Basic and Advanced)
-- Multi-class Text Classification
-
-### 🌳 **07_ensemble_methods**
-**Combining multiple models for better performance**
-- Bagging and Bootstrap Aggregating
-- Random Forest Deep Dive
-- Boosting Algorithms (AdaBoost, Gradient Boosting)
-- XGBoost and LightGBM
-- Stacking and Voting Classifiers
-
-### ⏰ **08_time_series_analysis**
-**Analyzing and forecasting time-dependent data**
-- Time Series Fundamentals and Components
-- Traditional Forecasting (ARIMA, Exponential Smoothing)
-- Machine Learning for Time Series
-- Advanced Methods (Prophet, LSTM)
-
-### 🎯 **09_dimensionality_reduction**
-**Reducing feature complexity while preserving information**
-- Principal Component Analysis (PCA)
-- Linear Discriminant Analysis (LDA)
-- Kernel PCA for Non-linear Reduction
-
-### ⚙️ **06_model_selection_and_evaluation**
-**Optimizing and evaluating models (Advanced Final Section)**
-- Cross-Validation Techniques
-- Grid Search and Hyperparameter Tuning
-- XGBoost and Advanced Model Selection
-
-## 🛠️ Setup and Installation
-
-### Prerequisites
-- Python 3.8+
-- Jupyter Notebook
-- Git
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/Morobang/machine-learning-journey.git
-cd machine-learning-journey
-
-# Install required packages
-pip install -r requirements.txt
-
-# Or using conda
-conda env create -f environment.yml
-conda activate ml-journey
-```
-
-## 📖 How to Use This Repository
-
-### **For Beginners:**
-1. Start with `00_foundations/theory/` to understand ML concepts
-2. Work through `00_foundations/notebooks/` for data preprocessing
-3. Progress through supervised learning (regression → classification)
-4. Move to unsupervised learning techniques
-5. Explore advanced topics (reinforcement learning, deep learning)
-
-### **For Experienced Learners:**
-- Jump to specific algorithms of interest
-- Use the comprehensive notebooks as reference
-- Compare different approaches within each paradigm
-
-### **Learning Path:**
-```
-Foundations → Supervised Learning → Unsupervised Learning → 
-Reinforcement Learning → Deep Learning → NLP → Ensemble Methods → 
-Time Series → Dimensionality Reduction → Model Selection & Evaluation
-```
-
-## 📊 Key Features
-
-- **📋 Comprehensive Notebooks**: Each algorithm includes detailed explanations, code, and practical examples
-- **🎯 Learning-Focused**: Structured for optimal educational progression
-- **💡 Beginner-Friendly**: Extensive comments and explanations for newcomers
-- **🔄 Practical Examples**: Real-world datasets and business applications
-- **📈 Visual Learning**: Charts, graphs, and visualizations throughout
-- **🧪 Hands-On Practice**: Interactive notebooks for experimentation
-
-## 🎯 Learning Objectives
-
-By completing this journey, you will:
-
-- ✅ Understand fundamental ML concepts and terminology
-- ✅ Master data preprocessing and feature engineering
-- ✅ Implement and compare various ML algorithms
-- ✅ Understand when to use different algorithms
-- ✅ Evaluate and optimize model performance
-- ✅ Apply ML to real-world problems
-- ✅ Build a solid foundation for advanced ML topics
-
-## 📁 Folder Structure Explained
-
-```
-machine-learning-journey/
-├── 00_foundations/                    # ML basics and data preprocessing
-├── 01_supervised_learning/            # Algorithms with labeled data
-│   ├── 01_regression/                # Continuous target prediction
-│   └── 02_classification/            # Categorical target prediction
-├── 02_unsupervised_learning/          # Algorithms without labels
-│   ├── clustering/                   # Finding groups in data
-│   └── association_rules/            # Finding item relationships
-├── 03_reinforcement_learning/         # Learning through interaction
-├── 04_deep_learning/                  # Neural networks
-├── 05_natural_language_processing/    # Text analysis and NLP
-├── 07_ensemble_methods/               # Combining multiple models
-├── 08_time_series_analysis/           # Time-dependent data analysis
-├── 09_dimensionality_reduction/       # Feature reduction techniques
-├── 06_model_selection_and_evaluation/ # Model optimization (Final)
-├── docs/                             # Additional documentation
-├── projects/                         # End-to-end ML projects
-└── utils/                            # Helper functions and utilities
-```
-
-## 🤝 Contributing
-
-This is a personal learning repository, but suggestions and improvements are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your improvements
-4. Submit a pull request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Inspired by various ML courses and tutorials
-- Thanks to the open-source ML community
-- Special recognition to all the dataset providers
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Notebooks](https://img.shields.io/badge/Notebooks-65%2B-orange?logo=jupyter)](https://jupyter.org/)
+[![Sections](https://img.shields.io/badge/Sections-10-blueviolet)](#learning-roadmap)
+[![Last Commit](https://img.shields.io/github/last-commit/Morobang/machine-learning-journey)](https://github.com/Morobang/machine-learning-journey/commits/main)
+[![CI](https://github.com/Morobang/machine-learning-journey/actions/workflows/ci.yml/badge.svg)](https://github.com/Morobang/machine-learning-journey/actions)
 
 ---
 
-**Happy Learning! 🎓✨**
+> A structured, beginner-to-advanced machine learning curriculum.
+> Every topic includes **theory**, a **runnable notebook**, and **exercises** —
+> so you understand the algorithm, not just the API call.
 
-*"The journey of a thousand miles begins with a single step." - Start your ML journey today!*
+---
+
+## Who is this for?
+
+| You are... | Start here |
+|---|---|
+| New to ML, solid Python basics | [00 — Foundations](00_foundations/) |
+| Know some ML, want depth | [01 — Supervised Learning](01_supervised_learning/) |
+| Preparing for ML interviews | [09 — Model Selection & Evaluation](09_model_selection_and_evaluation/) + interview prep sections in each notebook |
+| Building a portfolio project | [projects/](projects/) |
+| Looking for reusable ML utilities | [src/](src/) |
+
+---
+
+## Learning Roadmap
+
+Work through sections in order, or jump to any topic you need.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                   START HERE (everyone)                     │
+│              00 · Foundations & Preprocessing               │
+└─────────────────────────┬───────────────────────────────────┘
+                          │
+          ┌───────────────┴───────────────┐
+          ▼                               ▼
+┌─────────────────┐             ┌──────────────────┐
+│  01 · Supervised│             │ 02 · Unsupervised │
+│     Learning    │             │     Learning      │
+│ Regression      │             │ Clustering        │
+│ Classification  │             │ Association Rules │
+└────────┬────────┘             └────────┬──────────┘
+         │                               │
+         └───────────────┬───────────────┘
+                         ▼
+         ┌───────────────────────────────┐
+         │   03 · Reinforcement Learning  │
+         └───────────────┬───────────────┘
+                         ▼
+         ┌───────────────────────────────┐
+         │      04 · Deep Learning        │
+         │   ANN · CNN · RNN · Transfer   │
+         └───────────────┬───────────────┘
+                         ▼
+         ┌───────────────────────────────┐
+         │  05 · Natural Language Proc.   │
+         │  Text · Sentiment · Transformers│
+         └───────────────┬───────────────┘
+                         ▼
+    ┌────────────────────┼────────────────────┐
+    ▼                    ▼                    ▼
+┌────────────┐  ┌──────────────┐  ┌──────────────────┐
+│06 · Ensemble│  │07 · Time     │  │08 · Dimensionality│
+│   Methods  │  │   Series     │  │    Reduction      │
+└────────────┘  └──────────────┘  └──────────────────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  09 · Model Selection &        │
+         │      Evaluation               │
+         └───────────────┬───────────────┘
+                         ▼
+         ┌───────────────────────────────┐
+         │  10 · MLOps & Deployment  🚀  │
+         └───────────────────────────────┘
+```
+
+---
+
+## What's Inside
+
+| # | Section | Topics | Notebooks |
+|---|---|---|---|
+| [00](00_foundations/) | **Foundations** | Data types, preprocessing, EDA, feature engineering, math basics | 4 |
+| [01](01_supervised_learning/) | **Supervised Learning** | Linear/Polynomial/SVR/Tree/Forest Regression · Logistic/KNN/SVM/Naive Bayes/Tree/Forest Classification | 14 |
+| [02](02_unsupervised_learning/) | **Unsupervised Learning** | K-Means, Hierarchical, DBSCAN · Apriori, ECLAT | 5 |
+| [03](03_reinforcement_learning/) | **Reinforcement Learning** | UCB, Thompson Sampling, Q-Learning | 3 |
+| [04](04_deep_learning/) | **Deep Learning** | ANN, CNN, RNN/LSTM, Transfer Learning | 4 |
+| [05](05_natural_language_processing/) | **NLP** | Text preprocessing, BoW/TF-IDF, Sentiment, Word2Vec, Transformers | 5 |
+| [06](06_ensemble_methods/) | **Ensemble Methods** | Bagging, XGBoost, LightGBM, Gradient Boosting, Stacking | 4 |
+| [07](07_time_series_analysis/) | **Time Series** | ARIMA, Exponential Smoothing, LSTM Forecasting | 3 |
+| [08](08_dimensionality_reduction/) | **Dimensionality Reduction** | PCA, LDA, Kernel PCA, t-SNE/UMAP | 4 |
+| [09](09_model_selection_and_evaluation/) | **Model Selection & Evaluation** | Cross-validation, GridSearch, Bias-Variance, SHAP | 4 |
+| [10](10_mlops_and_deployment/) | **MLOps & Deployment** | Model serialization, FastAPI, MLflow | 3 |
+
+---
+
+## Projects
+
+End-to-end projects that put the theory to work.
+
+| Project | Difficulty | Key Skills | Status |
+|---|---|---|---|
+| [Titanic Survival Prediction](projects/beginner/01_titanic_eda/) | Beginner | EDA, feature engineering, classification | Complete |
+| [COVID-19 Analysis](projects/beginner/02_covid19_analysis/) | Beginner | Data wrangling, time series visualization | Complete |
+| [Customer Churn Prediction](projects/intermediate/01_customer_churn/) | Intermediate | Imbalanced data, SHAP, model serialization | In Progress |
+| [House Price Prediction](projects/intermediate/02_house_price_prediction/) | Intermediate | Full pipeline, feature engineering, ensembling | Planned |
+| [Sentiment Analysis API](projects/advanced/01_sentiment_api/) | Advanced | NLP, FastAPI, Docker | Planned |
+
+---
+
+## Quick Start
+
+```bash
+# Clone
+git clone https://github.com/Morobang/machine-learning-journey.git
+cd machine-learning-journey
+
+# Set up environment (Python 3.10+)
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Launch Jupyter
+jupyter notebook
+```
+
+See [docs/setup.md](docs/setup.md) for full setup instructions, conda alternative, and troubleshooting.
+
+---
+
+## Repository Structure
+
+```
+machine-learning-journey/
+├── 00_foundations/          # ML basics, data preprocessing, EDA
+├── 01_supervised_learning/  # Regression + Classification algorithms
+├── 02_unsupervised_learning/# Clustering + Association Rules
+├── 03_reinforcement_learning/
+├── 04_deep_learning/
+├── 05_natural_language_processing/
+├── 06_ensemble_methods/
+├── 07_time_series_analysis/
+├── 08_dimensionality_reduction/
+├── 09_model_selection_and_evaluation/
+├── 10_mlops_and_deployment/
+├── projects/                # End-to-end ML projects (beginner → advanced)
+│   ├── beginner/
+│   ├── intermediate/
+│   └── advanced/
+├── src/                     # Reusable Python utilities (preprocessing, evaluation, plots)
+├── data/                    # Centralized datasets (see data/README.md for sources)
+│   ├── small/               # <1 MB — committed to git
+│   ├── medium/              # 1–50 MB — committed to git
+│   └── external/            # >50 MB — run download_datasets.py
+├── docs/                    # Setup guide, notebook template, contributing info
+├── tests/                   # Unit tests for src/ utilities
+└── .github/                 # CI workflows, issue templates, PR template
+```
+
+---
+
+## How Each Section is Organized
+
+```
+NN_section_name/
+├── README.md           ← Overview, contents table, prerequisites
+├── theory/             ← Markdown files: math, intuition, use cases
+│   └── NN_topic.md
+└── notebooks/          ← Jupyter notebooks: implementation + exercises
+    └── NN_topic.ipynb
+```
+
+Theory docs and notebooks are paired. The theory explains the *why*; the notebook implements the *how*.
+
+---
+
+## Contributing
+
+Contributions are welcome — from fixing a typo to adding a full new section.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+
+Quick checklist for notebooks:
+- Follows the [standard notebook template](docs/notebook_template.md)
+- Runs clean with `Kernel > Restart & Run All`
+- No datasets larger than 5 MB committed
+
+---
+
+## License
+
+[MIT License](LICENSE) — free to use, modify, and share with attribution.
+
+---
+
+*Built to understand machine learning, not just use it.*

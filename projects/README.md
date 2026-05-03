@@ -1,13 +1,60 @@
-# 🚀 Data Science Projects Roadmap 🔬📈
+# Projects
 
-> *From beginner to advanced: Your complete guide to hands-on data science projects*
+End-to-end ML projects that go beyond individual algorithm notebooks.
+Each project has a clear business problem, a full data pipeline, multiple models compared, and results interpreted for a non-technical audience.
 
-## 📋 Table of Contents
-- [🎯 Overview](#-overview)
-- [🔰 Beginner Projects](#-beginner-level-projects)
-- [🚀 Intermediate Projects](#-intermediate-level-projects)
-- [🔥 Advanced Projects](#-advanced-level-projects)
-- [📚 Learning Path](#-learning-path)
+---
+
+## How projects differ from section notebooks
+
+Section notebooks teach one algorithm at a time on a clean dataset.
+Projects are messier and closer to real work: ambiguous problems, dirty data, multiple approaches tried, and results that must be explained to stakeholders.
+
+---
+
+## Beginner
+
+| # | Project | Key Skills | Status |
+|---|---------|-----------|--------|
+| [01](beginner/01_titanic_eda/) | **Titanic Survival Prediction** | EDA, feature engineering, classification | Complete |
+| [02](beginner/02_covid19_analysis/) | **COVID-19 Data Analysis** | Time series, data wrangling, visualisation | Complete |
+
+> **beginner/03–09** are planning stubs only. They will be built out and promoted to intermediate once notebooks are written.
+
+---
+
+## Intermediate
+
+Full ML pipelines: cleaning → feature engineering → model comparison → evaluation → business interpretation.
+
+| # | Project | Key Skills | Status |
+|---|---------|-----------|--------|
+| [01](intermediate/01_customer_churn/) | **Customer Churn Prediction** | Class imbalance, SHAP, model serialisation | In Progress |
+| [02](intermediate/02_house_price_prediction/) | **House Price Prediction** | Feature engineering, ensembling, leaderboard submission | Planned |
+
+---
+
+## Advanced
+
+Production-level work: deployed models, APIs, reproducible pipelines.
+
+| # | Project | Key Skills | Status |
+|---|---------|-----------|--------|
+| [01](advanced/01_sentiment_api/) | **Sentiment Analysis API** | NLP pipeline, FastAPI, Docker | Planned |
+
+---
+
+## Project standards
+
+Every complete project must have:
+- `README.md` with problem statement, dataset info, results, and how to run
+- `notebooks/` with at least one EDA notebook and one modelling notebook
+- Final metrics interpreted in plain English, not just printed numbers
+- A "what I would do with more time" section
+
+**Complete** = all standards met. **In Progress** = notebooks started. **Planned** = spec written, no notebooks yet.
+
+---
 - [🛠️ Tools & Technologies](#️-tools--technologies)
 - [� Success Tips](#-success-tips)
 
